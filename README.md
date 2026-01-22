@@ -1,4 +1,4 @@
-# ComfyUI Z-image-Turbo to NVFP4 converter
+# ComfyUI Kitchen NVFP4 Converter
 
 # Mise à jours:
 Ajout du support pour Flux.1 (Merci à Philippe Joye)
