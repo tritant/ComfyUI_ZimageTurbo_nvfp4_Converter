@@ -3,6 +3,7 @@
 Un nœud simple et ultra-rapide pour convertir Z-image-turbo au format **NVFP4** directement depuis l'interface ComfyUI.
 
 Ce format permet de diviser la taille des modèles par 3.5 tout en conservant une qualité quasi identique au BF16, tout en profitant des **Tensor Cores** des cartes NVIDIA récentes.
+<img width="1750" height="808" alt="Capture d&#39;écran 2026-01-22 161324" src="https://github.com/user-attachments/assets/ae23a6db-e948-48aa-99a8-2005bad1a4d7" />
 
 ## 🛠️ Installation
 
