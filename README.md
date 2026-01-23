@@ -1,7 +1,9 @@
 # ComfyUI Kitchen NVFP4 Converter
 
 # Mise à jours:
+Base support Z-Image-Turbo
 Ajout du support pour Flux.1 (Philippe Joye)
+Ajout du support pour Flu.1 Fill
 ---
 Un nœud ComfyUI haute performance pour convertir vos modèles en NVFP4. Basculez entre les architectures Z-Image et Flux.1 en un clic et profitez de la puissance des Tensor Cores.
 
