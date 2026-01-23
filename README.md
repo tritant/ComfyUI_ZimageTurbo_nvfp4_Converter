@@ -4,8 +4,9 @@
 - Base support Z-Image-Turbo
 - Ajout du support pour Flux.1 (Philippe Joye)
 - Ajout du support pour Flux.1 Fill
+- Ajout du support pour Qwen-image-edit 2511 (Merci Philippe)
 ---
-Un nœud ComfyUI haute performance pour convertir vos modèles en NVFP4. Basculez entre les architectures Z-Image, Flux.1, Flux.1-Fill en un clic et profitez de la puissance des Tensor Cores.
+Un nœud ComfyUI haute performance pour convertir vos modèles en NVFP4. Basculez entre les architectures Z-Image, Flux.1, Flux.1-Fill, Qwen-image-edit 2511 en un clic et profitez de la puissance des Tensor Cores.
 
 Ce format permet de diviser la taille des modèles par 3.5 tout en conservant une qualité quasi identique au BF16, tout en profitant des **Tensor Cores** des cartes NVIDIA récentes.
 <img width="1692" height="830" alt="Capture d&#39;écran 2026-01-22 182126" src="https://github.com/user-attachments/assets/edfdc342-5c9a-4787-9f50-66ac02b39ed4" />
