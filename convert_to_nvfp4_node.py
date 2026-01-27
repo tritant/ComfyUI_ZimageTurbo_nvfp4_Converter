@@ -18,7 +18,7 @@ class ConvertToNVFP4:
             "required": {
                 "model_name": (folder_paths.get_filename_list("diffusion_models"),),
                 "output_filename": ("STRING", {"default": "model-nvfp4"}),
-                "model_type": (["Z-Image", "Flux.1", "Flux.1 Fill", "Flux.2", "Qwen-Image-Edit-2511", "Qwen-Image-2512"], {"default": "Z-Image"}),
+                "model_type": (["Z-Image", "Flux.1", "Flux.1 Fill", "Flux.2", "Qwen-Image-Edit-2511", "Qwen-Image-2512", "Wan2.2-i2v-high-low"], {"default": "Z-Image"}),
                 "device": (["cuda", "cpu"], {"default": "cuda"}),
             }
         }
@@ -34,12 +34,15 @@ class ConvertToNVFP4:
         output_path = os.path.join(os.path.dirname(input_path), f"{output_filename}.safetensors")
         
         # --- CONFIGURATION DES PROFILS ---
-        if model_type == "Qwen Image Edit 2511":
+        if model_type == "Qwen-Image-Edit-2511":
             BLACKLIST = ["img_in", "txt_in", "time_text_embed", "norm_out", "proj_out"]
             FP8_LAYERS = []
         elif model_type == "Qwen-Image-2512":
             BLACKLIST = ["img_in", "txt_in", "time_text_embed", "norm_out", "proj_out", "img_mod.1"]
             FP8_LAYERS = ["txt_mlp", "txt_mod"]
+        elif model_type == "Wan2.2-i2v-high-low":
+            BLACKLIST = ["text_embedding", "time_embedding", "time_projection", "head"]
+            FP8_LAYERS = []
         elif model_type in ["Flux.1", "Flux.1 Fill", "Flux.2"]:
             BLACKLIST = ["img_in", "txt_in", "time_in", "vector_in", "guidance_in", "final_layer", "class_embedding", "single_stream_modulation", "double_stream_modulation_img", "double_stream_modulation_txt"]
             FP8_LAYERS = []
